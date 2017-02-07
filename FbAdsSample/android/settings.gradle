@@ -1,0 +1,5 @@
+rootProject.name = 'FbAdsSample'
+
+include ':app'
+include ':react-native-fbads'
+project(':react-native-fbads').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbads/src/android')
