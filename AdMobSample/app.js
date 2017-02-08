@@ -10,7 +10,6 @@ import {
 import { AdMobBanner, AdMobInterstitial } from 'react-native-admob';
 
 AdMobInterstitial.setAdUnitID('ca-app-pub-8610011634603119/8418189380');
-// AdMobInterstitial.setAdUnitID('ca-app-pub-8610011634603119/6463052180');
 
 export default class AdMobSample extends Component {
   onPressButton() {
