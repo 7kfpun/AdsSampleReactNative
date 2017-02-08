@@ -73,7 +73,7 @@
       react-native link react-native-fbads
       ```
 
-    - Bolts.framework, FBSDKCoreKit.framework and FBAudienceNetwork.framework from [Facebook SDK for iOS](https://developers.facebook.com/docs/ios/getting-started)
+    - Add Bolts.framework, FBSDKCoreKit.framework and FBAudienceNetwork.framework from [Facebook SDK for iOS](https://developers.facebook.com/docs/ios/getting-started)
 
     - Setup Facebook SDK in AppDelegate.m file [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L15), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L38)
 
@@ -130,8 +130,28 @@
       ```
 
 - [Revmob](https://www.revmobmobileadnetwork.com)
+
   - [react-native-revmob](https://github.com/RevMob/react-native-revmob)
-  - [Integration Guides](https://www.revmobmobileadnetwork.com/sdk/react)
+
+  - Installation instructions for iOS
+
+    - Install and link react-native-revmob
+
+      ```
+      npm install -S RevMob/react-native-revmob
+      react-native link react-native-revmob
+      ```
+
+    - Add the following frameworks to your XCode Project:
+      - RevMobAds.framework from [RevMob SDK for iOS](https://www.revmobmobileadnetwork.com/sdk/react)
+      - AdSupport.framework
+      - AVFoundation.framework
+      - CoreFoundation.framework (as optional)
+      - CoreLocation.framework
+      - Foundation.framework
+      - MediaPlayer.framework
+      - StoreKit.framework
+      - SystemConfiguration.framework
 
 ## Running
 
