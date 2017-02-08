@@ -1,4 +1,4 @@
-# Ads - How to make money on your React Native app
+# Ads Sample - How to make money on your React Native app
 
 ## React and React Native version
 
@@ -9,18 +9,17 @@
 
 - [AdMob](https://firebase.google.com/docs/admob/)
 
-  - [react-native-admob](https://github.com/sbugert/react-native-admob)
+  - [react-native-admob](https://github.com/sbugert/react-native-admob) - A react-native component for Google AdMob banners.
 
-  - A react-native component for Google AdMob banners.
+  - Installation instructions for iOS
 
     - Install and link react-native-admob
 
       ```
       npm install -S git://github.com/lucianomlima/react-native-admob.git#react-native_v0.40.0-fix
+
       react-native link react-native-admob
       ```
-
-  - Installation instructions for iOS
 
     - Add [Google AdMob Framework](https://firebase.google.com/docs/admob/ios/download) to Xcode
 
@@ -30,19 +29,20 @@
 
       ```
       npm install -S git://github.com/lucianomlima/react-native-admob.git#react-native_v0.40.0-fix
+
       react-native link react-native-admob
       ```
 
-    - Checking the following files
+    - Configure native projects
 
-      - [android/settings.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/settings.gradle#L4-L5)
+      - Add to [android/settings.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/settings.gradle#L4-L5)
 
         ```
         include ':react-native-admob'
         project(':react-native-admob').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-admob/android')
         ```
 
-      - [android/app/build.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/build.gradle#L129)
+      - Add to [android/app/build.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/build.gradle#L129)
 
         ```
         dependencies {
@@ -52,7 +52,7 @@
         }
         ```
 
-      - android/app/src/main/java/com/adssample/MainApplication.java [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/src/main/java/com/admobsample/MainApplication.java#L7), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/src/main/java/com/admobsample/MainApplication.java#L29)
+      - Add to android/app/src/main/java/com/adssample/MainApplication.java [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/src/main/java/com/admobsample/MainApplication.java#L7), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/AdMobSample/android/app/src/main/java/com/admobsample/MainApplication.java#L29)
 
         ```
         import com.sbugert.rnadmob.RNAdMobPackage;
@@ -70,12 +70,13 @@
 
       ```
       npm install -S react-native-fbads
+
       react-native link react-native-fbads
       ```
 
     - Add Bolts.framework, FBSDKCoreKit.framework and FBAudienceNetwork.framework from [Facebook SDK for iOS](https://developers.facebook.com/docs/ios/getting-started)
 
-    - Setup Facebook SDK in AppDelegate.m file [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L15), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L38)
+    - Add to AppDelegate.m file [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L15), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/ios/FbAdsSample/AppDelegate.m#L38)
 
       ```
       #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -89,12 +90,13 @@
 
       ```
       npm install -S react-native-fbads
+
       react-native link react-native-fbads
       ```
 
-    - Checking the following files
+    - Configure native projects
 
-      - [android/settings.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/settings.gradle#L4-L5)
+      - Add to [android/settings.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/settings.gradle#L4-L5)
 
         ```
         include ':react-native-fbads'
@@ -102,7 +104,7 @@
 
         ```
 
-      - [android/app/build.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/build.gradle#L129-L130)
+      - Add to [android/app/build.gradle](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/build.gradle#L129-L130)
 
       ```
       dependencies {
@@ -113,7 +115,7 @@
       }
       ```
 
-      - android/app/src/main/java/com/fbadssample/MainApplication.java [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/java/com/fbadssample/MainApplication.java#L12), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/java/com/fbadssample/MainApplication.java#L29)
+      - Add to android/app/src/main/java/com/fbadssample/MainApplication.java [1](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/java/com/fbadssample/MainApplication.java#L12), [2](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/java/com/fbadssample/MainApplication.java#L29)
 
       ```
       import io.callstack.react.fbads.FBAdsPackage;
@@ -121,7 +123,7 @@
       new FBAdsPackage()
       ```
 
-      - [android/app/src/main/AndroidManifest.xml](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/AndroidManifest.xml#L28-L30)
+      - Add to [android/app/src/main/AndroidManifest.xml](https://github.com/7kfpun/AdsSampleReactNative/blob/master/FbAdsSample/android/app/src/main/AndroidManifest.xml#L28-L30)
 
       ```
       <activity
@@ -139,6 +141,7 @@
 
       ```
       npm install -S RevMob/react-native-revmob
+
       react-native link react-native-revmob
       ```
 
