@@ -11,26 +11,11 @@ import {
   Text,
   View,
   TouchableHighlight,
-  NativeAppEventEmitter,
 } from 'react-native';
 
-import { RevMobManager } from 'react-native-revmob';
-
-export default class RevmobSample extends Component {
-  componentDidMount() {
-    RevMobManager.startSession('58907fc35790c64c0bebe68c', (err) => {
-      if(!err) {
-        RevMobManager.loadBanner();
-      }
-    });
-    NativeAppEventEmitter.addListener('onRevmobBannerDidReceive', () => {
-      RevMobManager.showBanner();
-    });
-  }
-
+export default class AdsSample extends Component {
   onPressButton() {
-    RevMobManager.loadFullscreen();
-    RevMobManager.showFullscreen();
+    console.log('Show an interstitial ad here.');
   }
 
   render() {
@@ -46,6 +31,8 @@ export default class RevmobSample extends Component {
             </Text>
           </TouchableHighlight>
         </View>
+
+        <Text>{'A banner here'}</Text>
       </View>
     );
   }
@@ -54,8 +41,7 @@ export default class RevmobSample extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent:'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
